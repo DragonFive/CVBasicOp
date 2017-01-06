@@ -182,3 +182,6 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+*.avi
+*.webm
+*.gitignore
