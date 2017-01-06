@@ -77,7 +77,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bgsegm32.cpp" />
+    <ClCompile Include="bgfg_32.cpp" />
+    <ClCompile Include="bgsegm_xie.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

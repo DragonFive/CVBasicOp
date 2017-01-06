@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="bgsegm32.cpp">
+    <ClCompile Include="bgsegm_xie.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="bgfg_32.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
