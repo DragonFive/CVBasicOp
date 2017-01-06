@@ -14,8 +14,43 @@ const char* keys =
 	"{fn|file_name|tree.avi | movie file             }"
 };
 
+void backgroudSubstract()
+{
+	Ptr<cv::bgsegm::BackgroundSubtractorGMG> bcgst = cv::bgsegm::createBackgroundSubtractorGMG();
+	VideoCapture vdcp("D:\\IP_CV_WorkSpace\\video\\20160328_video\\5.38 MVI_0867.MOV");
+	if (!vdcp.isOpened())
+	{
+		cout << "error in open video" << endl;
+	}
+	else
+	{
+		Mat frame;
+		Mat mask;
+		Mat bgImg;
+		while (true)
+		{
+			vdcp >> frame;
+			if (frame.empty())
+			{//²¥·Å½áÊø;
+				break;
+			}
+			bcgst->apply(frame, mask);
+			bcgst->getBackgroundImage(bgImg);
+			imshow("frame", frame);
+			imshow("background", bgImg);
+			imshow("mask", mask);
+			int key = waitKey(40);
+			if (27 == key)
+				break;
+		}
+		vdcp.release();
+	}
+	return;
+}
+
+
 //this is a sample for foreground detection functions
-int main(int argc, const char** argv)
+int t_main()
 {
 
 	VideoCapture cap;
